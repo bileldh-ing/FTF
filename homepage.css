@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+iframe {
+    width: 100%;
+    border: none;
+}
+
+#headerup-iframe {
+    height: 130px; 
+    margin-bottom: -7px;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 5; 
+    display: none; 
+}
+
+.text-row {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    gap: 30px;
+    font-family: 'Mulish', sans-serif;
+    font-weight: 500; 
+    padding: 10px;
+    width: 100%; 
+    position: relative;
+    background-color: #f8f8f8;
+    margin-bottom: 10px;
+}
+
+.text-item {
+    position: relative;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+.hover-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-size: 12px;
+    padding: 5px 30px;
+    border-radius: 5px;
+    white-space: nowrap;
+}
+
+.hover-content span {
+    display: block;
+    padding: 2px 0;
+}
+
+.text-item:hover .hover-content {
+    display: block;
+}
+
+.language-options {
+    position: absolute; 
+    right: 45px; 
+    font-size: 16px;
+    text-align: right;
+}
+
+.text-row div {
+    font-size: 16px;
+    text-align: center;
+}
+
+.dropdown-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #fff;
+    position: fixed; 
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.dropdown-header {
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dropdown-header h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.dropdown-header .close-btn {
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.dropdown-menu ul {
+    list-style: none;
+    padding: 10px;
+}
+
+.dropdown-menu ul li {
+    padding: 15px;
+    border-bottom: 1px solid #e0e0e0;
+    cursor: pointer;
+    position: relative;
+}
+
+.dropdown-menu ul li .toggle-icon {
+    position: absolute;
+    right: 10px;
+}
+
+.dropdown-menu ul li ul {
+    display: none;
+    list-style: none;
+    padding-left: 20px;
+    background-color: #f4f4f4;
+}
+
+.dropdown-menu ul li.active ul {
+    display: block; 
+}
+
+.dropdown-menu ul li ul li {
+    padding: 12px 0;
+}
+
+.dropdown-menu ul li ul li:hover {
+    background-color: #e0e0e0;
+}
+
+.dropdown-menu .button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+}
+
+.dropdown-menu button {
+    padding: 10px 16px;
+    width: 150px;
+    font-size: 12px;
+    font-family: 'Mulish', sans-serif;
+    font-weight: 500;
+    background: #949494;
+    color: white;
+    border: 1px solid #949494;
+    box-shadow: inset 2px 4px 5px 1px rgba(255, 255, 255, 0.31);
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.dropdown-menu button:hover {
+    background: #7a7a7a;
+    border-color: #7a7a7a;
+}
+
+#headlines-iframe {
+    height: 530px; 
+}
+
+#bestof-iframe {
+    height: 500px;
+}
+
+#interviews-iframe {
+    height: 850px;
+}
+#wide-iframe {
+    height: 500px;
+}
+#carousel-iframe {
+    height: 600px; 
+}
+
+#festgalerie-iframe {
+    height: 600px; 
+}
+
+#galerie-iframe {
+    height: 400px; 
+}
+
+#footer-iframe {
+    height: 500px; 
+}
+
+@media (max-width: 768px) {
+    #headerup-iframe {
+        height: 150px; 
+    }
+    #headlines-iframe {
+        height: 430px;
+    }
+    #bestof-iframe {
+        height: 500px;
+    }
+    #interviews-iframe {
+    height: 2250px;
+    }
+    #festgalerie-iframe {
+        height: 1350px; 
+    }
+    #carousel-iframe {
+        height: 230px; 
+    }
+    #galerie-iframe {
+        height: 400px; 
+    }
+    #wide-iframe {
+        height: 320px;
+    }
+    #footer-iframe {
+        height: 950px; 
+    }
+    .dropdown-menu {
+        width: 75%;
+    }
+    .text-row {
+        display: none;
+    }
+}

@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header styling */
+.header {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: max-content;
+  gap: 10px;
+  align-items: center;
+  background-color: #f8f8f8;
+}
+
+.header-inside {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  padding: 16px 30px;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  width: 180px;
+}
+
+.logo-container img {
+  width: 34px;
+  height: 84px;
+  margin-right: 10px;
+}
+
+.text-blocks {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 84px;
+  color:  #D4A10F;
+}
+
+.near-logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  width: 415px;
+  height: 70px;
+  color:  #D4A10F;
+}
+
+.titre1 {
+  font-size: 14px;
+  font-family: Verdana;
+  font-weight: 400;
+}
+
+.titre2 {
+  font-size: 12px;
+  font-family: 'Bodoni Moda', serif;
+  font-weight: 400;
+}
+
+.titre3 {
+  font-size: 30px;
+  font-weight: 400;
+  font-family: "Aref Ruqaa";
+  width: 200px;
+  text-align: right;
+  line-height: 1;
+  margin: 0;
+}
+.titre4 {
+  font-size: 15px;
+  font-weight: 400;
+  font-family: Verdana;
+  width: 160px;
+  text-align: left;
+}
+.titre5 {
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Bodoni Moda";
+  width: 180px;
+  text-align: left;
+  line-height: 1;
+  margin: 0;
+}
+.titre6 {
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Aref Ruqaa";
+  width: 160px;
+  text-align: left;
+}
+
+.buttons-container {
+  display: flex;
+  gap: 10px;
+}
+
+.buttons-container button {
+  padding: 6px 16px;
+  width: 150px;
+  height: 30px;
+  font-size: 11px;
+  font-family: 'Mulish', sans-serif;
+  font-family: 500;
+  background: #949494;
+  color: white;
+  border: 1px solid #949494;
+  box-shadow: inset 2px 4px 5px 1px rgba(255, 255, 255, 0.31);
+}
+
+.association-container {
+  display: flex;
+  width: 150px;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.horizontal-line {
+  border: none;
+  height: 2px;
+  background-color: #000;
+  width: 60%;
+}
+
+.burger-menu {
+  display: none; 
+  cursor: pointer;
+}
+
+.burger-icon {
+  font-size: 30px;
+  color: #000;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-inside {
+    flex-direction: row; 
+    justify-content: space-between;
+    width: 100%;
+    align-items: center; 
+  }
+
+  .near-logo, .association-container, .buttons-container, .text-row, hr {
+    display: none;
+  }
+
+  .buttons-container {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .buttons-container button {
+    width: 100%;
+  }
+
+  .logo-container {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .burger-menu {
+    display: block; 
+    cursor: pointer;
+    width: 5%;
+    margin-left: auto; 
+  }
+}

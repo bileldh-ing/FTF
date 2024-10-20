@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+footer {
+    background-color: #F5F5F5;
+    color: #000000;
+    padding: 50px 0;
+    width: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* First Section */
+.footer-section-1 {
+    font-family: 'Lora';
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-section-1 h1 {
+    font-size: 36px;
+    margin: 0 0 10px;
+}
+
+.footer-section-1 p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.social-icons {
+    margin-top: 15px;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 24px;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.social-icons a .fa-facebook-f {
+    color: #1877F2; /* Facebook Blue */
+}
+
+.social-icons a .fa-instagram {
+    color: #E4405F; 
+}
+
+.social-icons a .fa-twitter {
+    color: #1DA1F2; 
+}
+
+.social-icons a .fa-youtube {
+    color: #FF0000;
+}
+
+.social-icons a .fa-tiktok {
+    color: #000000; 
+}
+
+.social-icons a .fa-linkedin-in {
+    color: #0A66C2;
+}
+
+.social-icons a:hover {
+    color: #f7c08a;
+}
+
+/* Second Section */
+.footer-section-2 {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Mulish';
+    align-items: start;
+    padding: 40px 0;
+    color: #000000;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Left Column - Logo */
+.footer-left {
+    max-width: 30%;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    width: 180px;
+    height: 120px;
+  }
+  
+  .logo-container img {
+    width: 34px;
+    height: 120px;
+    margin-right: 10px;
+  }
+  
+  .text-blocks {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 84px;
+    color:  #D4A10F;
+  }
+
+  .titre1 {
+    font-size: 14px;
+    font-family: Verdana;
+    font-weight: 400;
+  }
+  
+  .titre2 {
+    font-size: 12px;
+    font-family: 'Bodoni Moda', serif;
+    font-weight: 400;
+  }
+
+.footer-logo {
+    max-width: 150px;
+    margin-bottom: 15px;
+}
+
+.footer-center {
+    width: 30%;
+}
+/* Center Column - Contact Info */
+.footer-center h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.footer-center p {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+/* Right Column - Newsletter */
+.footer-right h3 {
+    font-size: 22px;
+    margin-bottom: 16px;
+}
+
+.footer-right p {
+    font-size: 16px;
+    margin-bottom: 16px;
+}
+
+.footer-right form {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-right input[type="email"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.footer-right button {
+    padding: 10px;
+    background-color: #f7c08a;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.footer-right button:hover {
+    background-color: #e5ae76;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-section-2 {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer-left {
+        width: 50%;
+    }
+
+    .footer-center {
+        width: 86%;
+    }
+
+    .footer-left, .footer-center, .footer-right {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basic Carousel</title>
+  <link rel="stylesheet" href="/components/carousel/carousel.css">
+
+</head>
+<body>
+<!--- Cas De test il doit afficher un logo de display video et le slide doit garder la meme size comme site Festival Cairo -->
+<div class="carousel-container">
+  <div class="carousel-slide">
+    <img src="/assets/images2.jpg" alt="Slide 1">
+    <div class="video-container">
+      <video src="https://www.youtube.com/watch?v=bn1p6h7wx4Y" alt="Slide 2"></video>
+      <div class="play-button" onclick="redirectToVideo(this)">&#9658;</div>
+    </div>
+    <img src="/assets/2.jpg" alt="Slide 3">
+    <div class="video-container">
+      <video src="https://www.youtube.com/watch?v=bn1p6h7wx4Y" alt="Slide 2"></video>
+      <div class="play-button" onclick="redirectToVideo(this)">&#9658;</div>
+    </div>
+  </div>
+
+  <!-- Prev/Next buttons -->
+  <button class="prev" onclick="moveSlide(-1)">&larr;</button>
+  <button class="next" onclick="moveSlide(1)">&rarr;</button>
+</div>
+
+<!-- Dots for navigation -->
+<div class="dots">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>  
+</div>
+
+<script src="carousel.js"></script>
+
+</body>
+</html>

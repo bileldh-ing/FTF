@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lora';
+    text-align: center;
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.title-container hr {
+    flex: 0.4;
+    height: 2px;
+    background-color: #000;
+    border: none;
+}
+
+h1 {
+    font-size: 35px;
+    font-weight: bold;
+    color: #333;
+    margin: 0 15px;
+    white-space: nowrap;
+}
+
+/* Image Grid */
+.image-grid {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+}
+
+.left-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    width: 520px;
+} 
+
+.small-image,
+.large-image {
+    position: relative;
+}
+
+.small-image img {
+    height: 235px;
+    width: 100%; 
+}
+
+.large-image img {
+    height: 494px;
+    width: 100%; 
+}
+
+.overlay-text1, .overlay-text2, .overlay-text3 {
+    position: absolute;
+    bottom: 4px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.341);
+    color: white;
+    text-align: center;
+    padding: 15px 2px;
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    .image-grid {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .left-column {
+      width: 400px;
+    }
+
+    .small-image img,
+    .large-image img {
+        height: 400px;
+        max-width: 400px; 
+        width: 100%;
+    }
+
+    .small-image, .large-image {
+        margin-bottom: 10px;
+    }
+}

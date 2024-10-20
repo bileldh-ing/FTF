@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.title-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.title-container hr {
+  flex: 0.4;
+  height: 2px;
+  background-color: #000000;
+  border: none;
+}
+
+h1 {
+  font-size: 35x;
+  font-weight: bold;
+  font-family: 'Lora';
+  color: #333;
+  margin: 0 15px;
+  white-space: nowrap;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Aligne les boîtes au centre avec moins d'espace */
+  gap: 80px;
+}
+
+.movie-box {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin-bottom: 5px; /* Réduit l'espacement vertical */
+  margin-right: 5px; /* Réduit l'espacement horizontal */
+  overflow: hidden;
+}
+.movie-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.overlay2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  color: gold;
+  text-align: center;
+  padding: 15px;
+  font-size: 1.2em;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .movie-box {
+      width: 100%;
+      max-width: 500px;
+  }
+}
+
+@media (max-width: 480px) {
+  .movie-box {
+      width: 100%;
+  }
+
+  .overlay2 {
+      font-size: 1em;
+      padding: 8px;
+  }
+}
+.gap{
+padding: 10px;        
+}
+
+.title-container {
+display: flex;
+align-items: center;
+justify-content: center;
+margin: 20px 0;
+width: 100%;
+}
+
+.title-container hr {
+flex: 0.4;
+height: 2px;
+background-color: #000000;
+border: none;
+}
+
+h1 {
+font-size: 35x;
+font-weight: bold;
+font-family: 'Lora';
+color: #333;
+margin: 0 15px;
+white-space: nowrap;
+}
+
+
+
+/* Carousel Container */
+.carousel-container {
+  max-width: 80%;
+  position: relative;
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+.carousel-slide {
+  display: flex;
+  justify-content: space-evenly;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  width: calc(100% / 3);
+  height: 520px;
+  flex: 1 0 auto; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.carousel-item img {
+  width: 300px;
+  height: 300px;
+}
+
+/* Image Description */
+.carousel-description {
+  width: 280px;
+  margin-top: 10px;
+  font-family: 'Mulish';
+}
+
+.carousel-description .date {
+  font-size: 14px;
+  color: #555;
+}
+
+.carousel-description .description {
+  font-weight: 600;
+  font-size: 16px;
+  color: #333;
+  margin: 5px 0;
+}
+
+.carousel-description .button {
+  margin-top: 10px;
+}
+
+.carousel-description button {
+  width: 200px;
+  padding: 12px;
+  background-color: white;
+  border: 2px solid #D4A10F;
+  color: #D4A10F;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Prev/Next buttons as arrows in circles */
+.prev, .next {
+  position: absolute;
+  top: 35%;
+  transform: translateY(-50%);
+  background-color: #D9D9D9;
+  color: black;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(197, 197, 197, 0.9);
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/* Dots for navigation */
+.dots {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.active {
+  background-color: #717171;
+}
+
+@media (max-width: 768px) {
+  .carousel-item {
+    width: 100%;
+    height: 500px; 
+  }
+
+  .carousel-item img {
+    width: 90%; 
+    height: 60%;
+  }
+
+  .carousel-description {
+    width: 90%; 
+    margin: 10px auto;
+  }
+
+
+  .prev, .next {
+    top: 30%; 
+  }
+}

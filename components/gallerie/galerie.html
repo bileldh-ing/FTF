@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Three-Item Carousel with Title and Lines</title>
+  <link rel="stylesheet" href="/components/gallerie/galerie.css">
+</head>
+<body>
+
+  <!-- Title with Horizontal Lines in One Row -->
+  <div class="title-container">
+    <hr>
+    <h1>Galerie</h1>
+    <hr>
+  </div>
+
+  <!-- Carousel Section -->
+  <div class="carousel-container">
+    <div class="carousel-slide">
+      <!-- Slide 1 -->
+      <div class="carousel-item">
+        <img src="https://via.placeholder.com/400x250/FF5733/FFFFFF?text=Event+1" alt="Event 1">
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-item">
+        <img src="https://via.placeholder.com/400x250/33C1FF/FFFFFF?text=Event+2" alt="Event 2">
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="carousel-item">
+        <img src="https://via.placeholder.com/400x250/75FF33/FFFFFF?text=Event+3" alt="Event 3">
+      </div>
+
+      <!-- Slide 4 -->
+      <div class="carousel-item">
+        <img src="https://via.placeholder.com/400x250/FFB833/FFFFFF?text=Event+4" alt="Event 4">
+      </div>
+    </div>
+
+    <button class="prev" onclick="moveSlide(-1)">&larr;</button>
+    <button class="next" onclick="moveSlide(1)">&rarr;</button>
+  </div>
+  <script src="galerie.js"></script>
+</body>
+</html>

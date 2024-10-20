@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wide</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+      /* Set the body and html to take up the full viewport height */
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Container for the image */
+      .image-container {
+        position: relative;
+        width: 100%;
+        height: 450px; /* Full height of the viewport */
+        overflow: hidden;
+      }
+
+      /* Image that covers the entire width of the screen */
+      .image-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      /* Text in the middle of the image */
+      .centered-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-family: "Lora";
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 55px;
+        font-weight: 500;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for readability */
+        text-align: center;
+      }
+
+      @media (max-width: 768px) {
+        .image-container {
+          height: 300px; /* Full height of the viewport */
+        }
+        .centered-text {
+          font-size: 25px;
+          position: center;
+          margin-top: -50px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Image container with centered text -->
+    <div class="image-container">
+      <img src="/assets/images.jpg" alt="Background Image" />
+      <div class="centered-text">
+        Le programme de long métrages en Compétition
+      </div>
+    </div>
+  </body>
+</html>
