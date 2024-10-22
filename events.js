@@ -20,12 +20,12 @@ function changeIframeContent() {
     centeredText.textContent = "Les ateliers";
   }
 
-  // Change image source
+  // Change image source in the wide iframe
   const imageElement = wideDocument.querySelector(
-    'img[src="/assets/images.jpg"]'
+    'img[src="../../assets/images.jpg"]'
   );
   if (imageElement) {
-    imageElement.src = "/assets/events.png";
+    imageElement.src = "../../assets/events.png";
   }
 }
 

@@ -1,65 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wide</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Image with Centered Text</title>
+    <!-- Importing Lora font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
-        /* Set the body and html to take up the full viewport height */
-        * {
-            margin: 0;
-            padding: 0;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-        /* Container for the image */
+      body,
+      html {
+        height: 100%;
+        font-family: "Lora", serif;
+      }
+
+      .image-container {
+        position: relative;
+        width: 100%;
+        height: 430px;
+      }
+
+      .image-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .centered-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-family: "Lora", serif;
+        font-weight: 700;
+        text-align: center;
+        line-height: 30.72px; /* Default for mobile */
+      }
+
+      /* Responsive styling for mobile */
+      @media (max-width: 768px) {
         .image-container {
-            position: relative;
-            width: 100%;
-            height: 450px; /* Full height of the viewport */
-            overflow: hidden;
+          height: 135px;
         }
 
-        /* Image that covers the entire width of the screen */
-        .image-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* Text in the middle of the image */
         .centered-text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            font-family: 'Lora';
-            transform: translate(-50%, -50%);
-            color: white;
-            font-size: 55px;
-            font-weight: 500;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for readability */
-            text-align: center;
+          font-size: 24px;
+          line-height: 30.72px;
         }
+      }
 
-        @media (max-width: 768px) {
-            .image-container {
-                height: 300px; /* Full height of the viewport */
-            }
-            .centered-text {
-                font-size: 25px;
-                position: center;
-                margin-top: -50px;
-            }
+      /* Responsive styling for desktop */
+      @media (min-width: 769px) {
+        .centered-text {
+          font-size: 64px;
+          line-height: 81.92px;
+          text-shadow: none; /* Removing text shadow for desktop */
         }
+      }
     </style>
-</head>
-<body>
-
-    <!-- Image container with centered text -->
+  </head>
+  <body>
     <div class="image-container">
-        <img src="/assets/images.jpg" alt="Background Image">
-        <div class="centered-text">Le programme de court métrages en Compétition</div>
+      <img
+        src="../../assets/images.jpg"
+        onerror="this.onerror=null; this.src='https://via.placeholder.com/1500x430';"
+        alt="Wide Image"
+      />
+      <div class="centered-text">
+        Le programme de courts métrages en Compétition
+      </div>
     </div>
-
-</body>
+  </body>
 </html>
