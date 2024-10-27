@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic PDF List</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Montserrat", sans-serif;
+      }
+
+      .box-container {
+        width: 100%;
+        max-width: 1200px;
+        border: 3px solid #d4a10f;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .pdf-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .pdf-item img {
+        width: 19.5px;
+        height: 19.5px;
+      }
+
+      .pdf-item a {
+        font-family: "Lora", serif;
+        font-size: 12px;
+        line-height: 15.36px;
+        color: #333;
+        text-decoration: none;
+      }
+
+      .pdf-item a:hover {
+        text-decoration: underline;
+      }
+
+      /* Responsive styles */
+      @media (max-width: 768px) {
+        .box-container {
+          max-width: 100%;
+          padding: 20px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .pdf-item a {
+          font-size: 11px;
+        }
+      }
+
+      @media (max-width: 320px) {
+        .box-container {
+          padding: 15px;
+        }
+        .pdf-item a {
+          font-size: 10px;
+          line-height: 14px;
+        }
+      }
+
+      @media (max-width: 200px) {
+        .box-container {
+          padding: 10px;
+          border-width: 2px;
+        }
+        .pdf-item {
+          gap: 5px;
+        }
+        .pdf-item a {
+          font-size: 9px;
+        }
+        .pdf-item img {
+          width: 15px;
+          height: 15px;
+        }
+      }
+
+      @media (max-width: 150px) {
+        .box-container {
+          padding: 5px;
+        }
+        .pdf-item a {
+          font-size: 8px;
+        }
+        .pdf-item img {
+          width: 12px;
+          height: 12px;
+        }
+      }
+
+      @media (max-width: 134px) {
+        .pdf-item a {
+          font-size: 7px;
+        }
+        .pdf-item img {
+          width: 10px;
+          height: 10px;
+        }
+        .box-container {
+          padding: 2px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box-container" id="pdf-container"></div>
+
+    <script>
+      const pdfSources = [
+        { src: "image.png", name: "Document.pdf", url: "Document.pdf" },
+        { src: "image.png", name: "Document.pdf", url: "Document.pdf" },
+        { src: "image.png", name: "Document.pdf", url: "Document.pdf" },
+        { src: "image.png", name: "Document.pdf", url: "Document.pdf" },
+      ];
+
+      const container = document.getElementById("pdf-container");
+
+      pdfSources.forEach((pdf) => {
+        const pdfItem = document.createElement("div");
+        pdfItem.classList.add("pdf-item");
+
+        const img = document.createElement("img");
+        img.src = pdf.src;
+        img.alt = `PDF Icon for ${pdf.name}`;
+
+        const link = document.createElement("a");
+        link.href = pdf.url;
+        link.download = pdf.name;
+        link.textContent = pdf.name;
+
+        pdfItem.appendChild(img);
+        pdfItem.appendChild(link);
+        container.appendChild(pdfItem);
+      });
+    </script>
+  </body>
+</html>
